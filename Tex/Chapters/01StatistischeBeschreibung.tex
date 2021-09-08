@@ -1,23 +1,51 @@
-\section{Statistische Beschreibung}
+\section{Einführung in die Statistische Beschreibung}
 \label{sec:StatistischeBeschreibung}
+\subsection{Beispiele}
 \subsection{Mathematische Beschreibung turbulenter Strömungen}
-Die Strömung wird bei der Betrachtung als Kontinuum über die Erhaltungsgleichungen beschrieben. Mit der Massenerhaltung:
+Die Strömung wird bei der Betrachtung als Kontinuum über die Erhaltungsgleichungen über die Zeit und Ort beschrieben. Mit der Massenerhaltung:
 \begin{equation}
 	\frac{D \rho}{D t}+\rho \frac{\partial u_{j}}{\partial x_{j}}=\frac{\partial \rho}{\partial t}+\rho \frac{\partial u_{j}}{\partial x_{j}}+u_{j} \frac{\partial \rho}{\partial x_{j}}=0
 \end{equation}
-und der Impulserhaltung:
+als Summe der Substantiellen Ableitung der Dichte nach Ort und Zeit und der Örtlichen Ableitung der Geschwindigkeit. Alternativ kann:
 \begin{equation}
+	\frac{\partial \rho}{\partial t} + \vec{\nabla}(\rho \vec{u}) =  \frac{\partial \rho}{\partial t} + \vec{\nabla} \rho \vec{u} + \rho \vec{\nabla}\vec{u}
+\end{equation}
+mit $\nabla$ als die örtliche Ableitung. Die Impulserhaltung ergibt sich zu:
+\begin{equation}
+	\label{eq: ImpulsmitS_ij}
 	\begin{aligned}
 		\frac{\partial \rho u_{i}}{\partial t}+\frac{\partial \rho u_{j} u_{i}}{\partial x_{j}} &=-\frac{\partial p}{\partial x_{i}}+\frac{\partial \tau_{j i}}{\partial x_{j}}+\rho f_{i} \\
 		&=-\frac{\partial p}{\partial x_{i}}+\frac{\partial}{\partial x_{j}}\left(2 \mu S_{i j}-\frac{2}{3} \mu \frac{\partial u_{k}}{\partial x_{k}} \delta_{i j}\right)+\rho f_{i}
 	\end{aligned}
 \end{equation}
-Unter der Annahme inkompressibler Strömung ($Ma <0,3$) wird $\rightarrow \rho = konst.$ Weiter wird keine Änderung der Temperatur angenommen und damit kann auch die Viskosität als Konstant angenommen werden. Es folgt damit für die Massenerhaltung: 
+Mit $\partial \rho u_{j} u_{i}/\partial x_i$ als dem konvektivem Term, $\tau_{ij}$ als die Scher oder Molekulare Spannung und einer Volumankraft. Wird der zweite Summand der Rechten Seite ausgeschrieben ergibt sich der untere Term. %TODO was ist hier genau passiert?
+Dieser wird nur berechnet, wenn $i$ und $j$ gleich sind (Kronikadelta).
+Unter der Annahme inkompressibler Strömung ($Ma <0,3$) wird $\rightarrow \rho = konst.$ Weiter wird keine Änderung der Temperatur angenommen und damit kann auch die Viskosität  als Konstant angenommen werden (Druckabhängigkeit der Viskosität um Skalen kleiner als die der Temperatur). Es folgt damit für die Massenerhaltung: 
 \begin{equation}
 	\frac{\partial u_{j}}{\partial x_{j}}=0
 \end{equation}
-und für die Impulserhaltung:
+Damit kann die Strömung als Divergenzfrei beschrieben werden. Für die Impulserhaltung folgt nach einsetzen der $S_{ij}$ Matrix aus \ref{eq: ImpulsmitS_ij}: 
 \begin{equation}
 	\rho \frac{Du_i}{Dt} = -\frac{\partial p}{\partial x_i}+\mu \frac{\partial^2 u_i}{\partial x^{2}_{i}} + \rho f_i
 \end{equation}
-Die Zeitliche Entwicklung der Strömung ist unter Angabe von Rand- und Anfangsbedingungen möglich. Damit folgt auch ein hoher Informationsgehalt aber auch ein hoher Rechenaufwand. 
+Die Zeitliche Entwicklung der Strömung ist unter Angabe von Rand- und Anfangsbedingungen möglich. Damit folgt auch ein hoher Informationsgehalt (Eine Direkte Numerische Simulation [DNS] ist damit möglich, jedoch meist mit sehr viel Aufwand verbunden) 
+Turbulente Strömung kann unterschiedlichste Skalen annehmen. Damit eine DNS durchgeführt werden kann müssen sowogl die Großen als auch die kleinen Instabilitäten aufgelöst werden. Das Verhältnis dieser Skalen kann über die Reynoldszahl abgeschätzt werden. 
+\begin{equation}
+	\frac{L}{\eta} \approx Re^{3/4} = \sqrt[4]{Re^3}
+\end{equation}
+Darin ist $L$ die größte Skala der Strömung und $\eta$ die kleinste. Auch die Zeitskala muss angepasst werden.
+\begin{equation}
+	\frac{t_L}{t_{\eta}} \approx Re^{1/2} = \sqrt{Re}
+\end{equation}
+Damit folgt für eine 3-Dimensionale Strömung, dass für eine Veränderte Strömung die Anzahl der Knoten in die Raumrichtungen sich wie folgt ändert:
+\begin{equation}
+	N_xN_yN_z \approx Re^{9/4}Re^{1/2} = Re^{11/4}
+\end{equation}
+Das bedeutet, dass beispielsweise eine Verdopplung der Strömungsgeschwindigkeit eine $\approx$8 -Fache Auflösung des Netzes erfordert. Aufgrund des schnell wachsenden aber auch schon für kleine Reynoldszahlen großen Aufwandes einer DNS werden diese nur verwendet, wenn es das Ziel ist fundamentale Strömungsphänomene zu beobachten oder auch Modelle herzuleiten, die das Phänomen abbilden können. Diese Modelle bilden die meist verwendeten Methoden zur Simulation einer Strömung. Dabei gibt es unterschiedlichste Ansätze. 
+
+
+\subsection{Statistische Beschreibung}
+Der Erwartungswert:
+\begin{equation}
+	\langle\phi\rangle_{e}\left(x_{i}, t\right)=\int_{-\infty}^{\infty} \psi f_{\phi}\left(\psi ; x_{i}, t\right) d \psi
+\end{equation}
