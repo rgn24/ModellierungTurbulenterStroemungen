@@ -1,0 +1,23 @@
+\section{Statistische Beschreibung}
+\label{sec:StatistischeBeschreibung}
+\subsection{Mathematische Beschreibung turbulenter Strömungen}
+Die Strömung wird bei der Betrachtung als Kontinuum über die Erhaltungsgleichungen beschrieben. Mit der Massenerhaltung:
+\begin{equation}
+	\frac{D \rho}{D t}+\rho \frac{\partial u_{j}}{\partial x_{j}}=\frac{\partial \rho}{\partial t}+\rho \frac{\partial u_{j}}{\partial x_{j}}+u_{j} \frac{\partial \rho}{\partial x_{j}}=0
+\end{equation}
+und der Impulserhaltung:
+\begin{equation}
+	\begin{aligned}
+		\frac{\partial \rho u_{i}}{\partial t}+\frac{\partial \rho u_{j} u_{i}}{\partial x_{j}} &=-\frac{\partial p}{\partial x_{i}}+\frac{\partial \tau_{j i}}{\partial x_{j}}+\rho f_{i} \\
+		&=-\frac{\partial p}{\partial x_{i}}+\frac{\partial}{\partial x_{j}}\left(2 \mu S_{i j}-\frac{2}{3} \mu \frac{\partial u_{k}}{\partial x_{k}} \delta_{i j}\right)+\rho f_{i}
+	\end{aligned}
+\end{equation}
+Unter der Annahme inkompressibler Strömung ($Ma <0,3$) wird $\rightarrow \rho = konst.$ Weiter wird keine Änderung der Temperatur angenommen und damit kann auch die Viskosität als Konstant angenommen werden. Es folgt damit für die Massenerhaltung: 
+\begin{equation}
+	\frac{\partial u_{j}}{\partial x_{j}}=0
+\end{equation}
+und für die Impulserhaltung:
+\begin{equation}
+	\rho \frac{Du_i}{Dt} = -\frac{\partial p}{\partial x_i}+\mu \frac{\partial^2 u_i}{\partial x^{2}_{i}} + \rho f_i
+\end{equation}
+Die Zeitliche Entwicklung der Strömung ist unter Angabe von Rand- und Anfangsbedingungen möglich. Damit folgt auch ein hoher Informationsgehalt aber auch ein hoher Rechenaufwand. 
