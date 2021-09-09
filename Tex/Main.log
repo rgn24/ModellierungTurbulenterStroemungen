@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021/W32TeX)  (format=lualatex 2021.9.7)  8 SEP 2021 23:57
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021/W32TeX)  (format=lualatex 2021.9.7)  9 SEP 2021 12:01
  restricted system commands enabled.
 **Main.tex
 (./Main.tex
@@ -1623,40 +1623,41 @@ LaTeX Font Info:    Font shape `TU/Roboto(0)/m/n' will be
  (./Chapters/01StatistischeBeschreibung.tex
 LaTeX Font Info:    Font shape `TU/Roboto(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 3.
-) [2
+ [2
 
-] (./Main.aux
+]) [3] (./Main.aux
 (./Chapters/01StatistischeBeschreibung.aux))
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 21929 strings out of 478152
+ 21933 strings out of 478152
  100000,1373583 words of node,token memory allocated
- 1774 words of node memory still in use:
+ 1810 words of node memory still in use:
    41 hlist, 6 vlist, 9 rule, 6 local_par, 4 math, 37 glue, 15 kern, 6 penalty, 
-1 glyph, 126 attribute, 59 glue_spec, 76 attribute_list, 3 write, 16 pdf_colorst
+1 glyph, 138 attribute, 59 glue_spec, 82 attribute_list, 3 write, 16 pdf_colorst
 ack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:2,2:1206,3:281,4:119,5:1160,6:139,7:7209,8:50,9:1178,10:9,11:6
-78
+   avail lists: 1:2,2:1324,3:281,4:119,5:1187,6:139,7:7316,8:54,9:1219,10:9,11:6
+86
  41447 multiletter control sequences out of 65536+600000
  123 fonts using 13320623 bytes
- 122i,20n,136p,10650b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 122i,21n,136p,10650b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf><c:/
 texlive/2021/texmf-dist/fonts/opentype/public/xcharter/XCharter-Roman.otf><c:/te
 xlive/2021/texmf-dist/fonts/opentype/google/roboto/Roboto-Bold.otf><c:/texlive/2
 021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/2021/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on Main.pdf (2 pages, 600718 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
+pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on Main.pdf (3 pages, 612929 bytes).
 
-PDF statistics: 109 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 131072)
+PDF statistics: 120 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 131072)
  33 words of extra memory for PDF output out of 10000 (max. 100000000)
 
