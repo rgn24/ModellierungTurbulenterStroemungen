@@ -3,4 +3,11 @@
 \contentsline {subsection}{\numberline {1.1}Beispiele}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Mathematische Beschreibung turbulenter Strömungen}{2}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Statistische Beschreibung}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Lernziele}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}RANS Gleichungen}{4}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Phänomenologie}{4}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Mathematische Gleichungen}{4}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Statistische Beschreibung}{4}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Herleitung RST Gleichungen}{4}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}02}{4}{subsection.2.2}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
