@@ -22,10 +22,12 @@ Mit $\partial \rho u_{j} u_{i}/\partial x_i$ als dem konvektivem Term, $\tau_{ij
 Dieser wird nur berechnet, wenn $i$ und $j$ gleich sind (Kronikadelta).
 Unter der Annahme inkompressibler Strömung ($Ma <0,3$) wird $\rightarrow \rho = konst.$ Weiter wird keine Änderung der Temperatur angenommen und damit kann auch die Viskosität  als Konstant angenommen werden (Druckabhängigkeit der Viskosität um Skalen kleiner als die der Temperatur). Es folgt damit für die Massenerhaltung: 
 \begin{equation}
+	\label{eq: Massenerhaltung}
 	\frac{\partial u_{j}}{\partial x_{j}}=0
 \end{equation}
 Damit kann die Strömung als Divergenzfrei beschrieben werden. Für die Impulserhaltung folgt nach einsetzen der $S_{ij}$ Matrix aus \ref{eq: ImpulsmitS_ij}: 
 \begin{equation}
+	\label{eq: Impulserhaltung}
 	\rho \frac{Du_i}{Dt} = -\frac{\partial p}{\partial x_i}+\mu \frac{\partial^2 u_i}{\partial x^{2}_{i}} + \rho f_i
 \end{equation}
 Die Zeitliche Entwicklung der Strömung ist unter Angabe von Rand- und Anfangsbedingungen möglich. Damit folgt auch ein hoher Informationsgehalt (Eine Direkte Numerische Simulation [DNS] ist damit möglich, jedoch meist mit sehr viel Aufwand verbunden) 
@@ -52,13 +54,49 @@ Der Erwartungswert (Normiert und damit immer $1$):
 \end{equation}
 Ellemblemittelung über alle Realisierungen($\phi^{(n)}$):
 \begin{equation}
+	\label{eq: Essenmble}
 	\langle\phi\rangle_{E}\left(x_{i}, t\right)=\lim _{N \rightarrow \infty} \frac{1}{N} \sum_{n=1}^{N} \phi^{(n)}\left(x_{i}, t\right)
 \end{equation}
 Zeitmittelung über alle Zeitlichen Realisierungen:
 \begin{equation}
+	\label{eq: Zeitmittel}
 	\langle\phi\rangle_{t}\left(x_{i}\right)=\lim _{T \rightarrow \infty} \frac{1}{T} \int^{\frac{T}{2}}_{-\frac{T}{2}} \phi\left(x_{i}, t\right) d t
 \end{equation}
 Ortsmittel über alle örtlichen Realisierungen:
 \begin{equation}
 	\langle\phi\rangle_{x_{i}}(t)=\lim _{L \rightarrow \infty} \frac{1}{L} \int_{-\frac{L}{2}}^{\frac{L}{2}} \phi\left(x_{i}, t\right) d x_{i}
 \end{equation}
+Handelt es sich um eine statistische stationäre Strömung, kann das Ensemblemittel (Gleichung \ref{eq: Essenmble}) durch das Zeitmittel (Gleichung \ref{eq: Zeitmittel}) ersetzt werden (\textit{Ergodizität}).
+Ist die Strömung räumlich homogen kann das Ensemblemittel durch das Ortsmittel ersetzt werden. Dies gilt auch bei partieller Homogenität (z.B. in einer Koordinatenrichtung). Diese Mittellung ist nicht erlaubt, wenn es in der Richtung Gradienten gibt. 
+
+
+\subsubsection{Reynolds-Mittel}
+Zu beginn einige Eigenschaften der Mittelungsoperationen.
+\begin{equation*}
+	\begin{aligned}
+		\text { Projektion }\langle\langle\phi\rangle\rangle &=\langle\phi\rangle \\
+		\text { Linearität }\langle\lambda \phi+\theta\rangle &=\lambda\langle\phi\rangle+\langle\theta\rangle \\
+		\text { Konstanz des Mittels }\langle\phi\langle\theta\rangle\rangle &=\langle\phi\rangle\langle\theta\rangle
+	\end{aligned}
+\end{equation*}
+Damit folgt für die Ableitung des Mittels:
+\begin{equation}
+	\left\langle\partial_{x_{i}} \phi\right\rangle=\partial_{x_{i}}\langle\phi\rangle \quad, \quad\left\langle\partial_{t} \phi\right\rangle=\partial_{t}\langle\phi\rangle
+\end{equation}
+Der Mittelwert der Schwanungen verschwindet und damit wird: 
+\begin{equation}
+	\left\langle\phi^{\prime}\right\rangle=0
+\end{equation}
+In der Reynoldschen Mittelung wird die Strömung in ihren Mittelwert und eine Schwankung um diesen Definiert. 
+\begin{equation}
+	\phi = \left\langle\phi\right\rangle + \phi^{\prime}
+\end{equation}
+Damit folgt mit der Massenerhaltung und Impilserhaltung (Gleichungen \ref{eq: Massenerhaltung} und \ref{eq: Impulserhaltung}) für die Reynolds-gemittelten Erhaltungsgleichungen:
+\begin{equation}
+	\begin{aligned}
+		\frac{\partial\left\langle u_{j}\right\rangle}{\partial x_{j}}&=0 \\
+		\frac{\partial \rho\left\langle u_{j}\right\rangle\left\langle u_{i}\right\rangle}{\partial x_{j}}&=-\frac{\partial\langle p\rangle}{\partial x_{i}}+\frac{\partial}{\partial x_{j}}\left(\mu \frac{\partial\left\langle u_{i}\right\rangle}{\partial x_{j}}-\rho\left\langle u_{i}^{\prime} u_{j}^{\prime}\right\}\right)+\left\langle F_{i}\right\rangle
+	\end{aligned}
+\end{equation}
+%TODO Die Berechungen der Terme Nachvollziehen und selber rechnen. Folgen aus 3u 4 und den Mittelungsoperationen.
+Dabei entstehen neue Unbekannte und wir bekommen ein unterbestimmtes System. 
