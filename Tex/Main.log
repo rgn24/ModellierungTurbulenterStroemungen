@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021/W32TeX)  (format=lualatex 2021.9.7)  13 SEP 2021 02:14
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021/W32TeX)  (format=lualatex 2021.9.7)  13 SEP 2021 19:43
  restricted system commands enabled.
 **Main.tex
 (./Main.tex
@@ -1645,8 +1645,8 @@ Here is how much of LuaTeX's memory you used:
    41 hlist, 6 vlist, 9 rule, 6 local_par, 4 math, 37 glue, 15 kern, 6 penalty, 
 1 glyph, 138 attribute, 61 glue_spec, 82 attribute_list, 3 write, 16 pdf_colorst
 ack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:2,2:1324,3:401,4:149,5:1190,6:163,7:7316,8:54,9:1219,10:9,11:6
-86
+   avail lists: 1:2,2:1267,3:422,4:155,5:1181,6:167,7:7406,8:51,9:1176,10:9,11:6
+97
  41473 multiletter control sequences out of 65536+600000
  123 fonts using 13320623 bytes
  122i,21n,136p,10650b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1661,10 +1661,10 @@ nts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
 pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texl
 ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on Main.pdf (4 pages, 616608 bytes).
+Output written on Main.pdf (4 pages, 617007 bytes).
 
-PDF statistics: 173 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
+PDF statistics: 174 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 131072)
  89 words of extra memory for PDF output out of 10000 (max. 100000000)
 
